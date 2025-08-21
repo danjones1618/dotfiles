@@ -1,3 +1,7 @@
 [[link]]
 source = "nvim"
 target = "~/.config/nvim"
+
+[[link]]
+source = "yazi"
+target = "~/.config/yazi"
