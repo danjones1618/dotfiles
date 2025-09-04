@@ -7,6 +7,11 @@ source = "yazi"
 target = "~/.config/yazi"
 
 [[link]]
+source = "kitty"
+target = "~/.config/kitty"
+requires = ["+has_kitty"]
+
+[[link]]
 source = "tmux"
 target = "~/.config/tmux"
 requires = ["+has_tmux"]
@@ -29,3 +34,4 @@ install = """#!/bin/bash
 [detectors]
 has_tmux = { enable_if = "command -v tmux" }
 has_taplo = { enable_if = "command -v taplo" }
+has_kitty = { enable_if = "command -v kitty" }
