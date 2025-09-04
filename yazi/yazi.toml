@@ -2,3 +2,6 @@
 image_delay = 0
 max_width = 4000
 max_height = 4000
+
+[tasks]
+image_bound = [0, 0]
