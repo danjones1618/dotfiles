@@ -5,3 +5,21 @@ target = "~/.config/nvim"
 [[link]]
 source = "yazi"
 target = "~/.config/yazi"
+
+[[link]]
+source = "tmux"
+target = "~/.config/tmux"
+requires = ["+has_tmux"]
+
+[[install]]
+name = "tmux-tpm"
+check = "stat ~/.config/tmux/plugins/tpm"
+requires = ["+has_tmux"]
+install = """#!/bin/bash
+    mkdir -p ~/.config/tmux/plugins
+    git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+"""
+
+
+[detectors]
+has_tmux = { enable_if = "command -v tmux" }
