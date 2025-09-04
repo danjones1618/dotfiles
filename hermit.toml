@@ -11,6 +11,11 @@ source = "tmux"
 target = "~/.config/tmux"
 requires = ["+has_tmux"]
 
+[[link]]
+source = "taplo/taplo.toml"
+target = "~/.config/taplo/taplo.toml"
+requires = ["+has_taplo"]
+
 [[install]]
 name = "tmux-tpm"
 check = "stat ~/.config/tmux/plugins/tpm"
@@ -23,3 +28,4 @@ install = """#!/bin/bash
 
 [detectors]
 has_tmux = { enable_if = "command -v tmux" }
+has_taplo = { enable_if = "command -v taplo" }
