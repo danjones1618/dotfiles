@@ -35,7 +35,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		map("<leader>v", "<cmd>vsplit | lua vim.lsp.buf.definition()<cr>", "Goto Definition in Vertical Split")
 
 		local function client_supports_method(client, method, bufnr)
-			if vim.fn.has("nvim-0.11") == 1 then
+            local version = vim.version()
+            if version.major > 0 or (version.major == 0 and version.minor >= 11) then
 				return client.supports_method(method, bufnr)
 			else
 				return client.supports_method(method, { bufnr = bufnr })
