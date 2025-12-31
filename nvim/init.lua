@@ -3,6 +3,7 @@ require("config.base_vim")
 require("core.lsp")
 require("config.keys")
 require("config.autocmds")
+require("config.global_cmds")
 require("nvim-treesitter.configs").setup({
 	ensure_installed = {
 		"lua",
