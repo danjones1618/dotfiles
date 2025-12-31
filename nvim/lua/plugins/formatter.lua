@@ -2,10 +2,10 @@ return {
 	"stevearc/conform.nvim",
 	opts = {
 		formatters_by_ft = {
-			python = { "ruff format", "ruff check --select I --fix" },
+			python = { "ruff_organize_imports", "ruff_format" },
 			rust = { "rustfmt", lsp_format = "fallback" },
 			lua = { "stylua" },
-			toml = { "taplo format" },
+			toml = { "taplo" },
 		},
 		format_on_save = {
 			timeout_ms = 500,
