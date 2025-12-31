@@ -1,3 +1,5 @@
+vim.keymap.set("n", "<C-p>", ":Files<CR>", { noremap = true, silent = true })
+
 vim.keymap.set({ "n", "i", "s" }, "<c-f>", function()
 	if not require("noice.lsp").scroll(4) then
 		return "<c-f>"
