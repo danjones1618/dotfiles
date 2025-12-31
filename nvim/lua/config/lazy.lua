@@ -36,6 +36,7 @@ require("lazy").setup({
 		{ "notjedi/nvim-rooter.lua", lazy = false },
 		{ "lewis6991/gitsigns.nvim" },
 		{ "justinmk/vim-sneak" },
+		{ "godlygeek/tabular" },
 		{ "alexghergh/nvim-tmux-navigation" },
 		{
 			"MeanderingProgrammer/render-markdown.nvim",
