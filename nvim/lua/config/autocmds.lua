@@ -5,9 +5,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			vim.keymap.set("n", keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
 		end
 
-		-- defaults:
-		-- https://neovim.io/doc/user/news-0.11.html#_defaults
-
 		local fzf = require("fzf-lua")
 
 		map("gl", vim.diagnostic.open_float, "Open Diagnostic Float")
@@ -29,9 +26,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		map("<leader>D", fzf.lsp_workspace_diagnostics, "Workspace diagnostics")
 		map("<leader>o", fzf.lsp_document_symbols, "Document symbols")
 		map("<leader>O", fzf.lsp_workspace_symbols, "Worksapce symbols")
-		-- map("<leader>gd", vim.lsp.buf.declaration, "Goto Declaration")
-		-- map("<leader>a", vim.lsp.buf.code_action, "Code Action")
-		-- map("<leader>rn", vim.lsp.buf.rename, "Rename all references")
 		map("<leader>rn", require("renamer").rename, "Rename all references")
 		map("<leader>lf", vim.lsp.buf.format, "Format")
 		map("<leader>v", "<cmd>vsplit | lua vim.lsp.buf.definition()<cr>", "Goto Definition in Vertical Split")
@@ -75,10 +69,3 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end
 	end,
 })
-
--- vim.api.nvim_create_autocmd("BufWritePre", {
---     pattern = "*",
---     callback = function(args)
---         require("conform").format({ bufnr = args.buf })
---     end
--- })
