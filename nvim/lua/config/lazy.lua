@@ -56,25 +56,7 @@ require("lazy").setup({
 				require("smoji")
 			end,
 		},
-		{
-			"mason-org/mason.nvim",
-			lazy = false,
-			opts = {},
-		},
 		{ "neovim/nvim-lspconfig" },
-		{
-			"mason-org/mason-lspconfig.nvim",
-			lazy = false,
-			dependencies = {
-				{ "mason-org/mason.nvim", opts = {} },
-				"neovim/nvim-lspconfig",
-			},
-			opts = {
-				ensure_installed = {
-					"rust_analyzer",
-				},
-			},
-		},
 		{ import = "plugins" },
 	},
 	-- Configure any other settings here. See the documentation for more details.
