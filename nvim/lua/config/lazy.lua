@@ -82,14 +82,6 @@ require("lazy").setup({
 				},
 			},
 		},
-		{
-			"filipdutescu/renamer.nvim",
-			dependencies = {
-				"nvim-lua/plenary.nvim",
-			},
-			opts = {},
-			event = "LspAttach",
-		},
 		{ import = "plugins" },
 	},
 	-- Configure any other settings here. See the documentation for more details.
