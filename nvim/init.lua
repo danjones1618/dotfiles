@@ -59,4 +59,23 @@ require("nvim-tmux-navigation").setup({
 
 vim.notify = require("notify")
 
-vim.lsp.enable({ "taplo" })
+vim.lsp.enable({
+	-- Datafiles
+	"taplo",
+	"yamlls",
+	"jsonls",
+	-- Python
+	"ty",
+	"ruff",
+	-- Web
+	"ts_ls",
+	"biome",
+	-- Rust
+	"rust_analyzer",
+	-- Docker
+	"dockerls",
+	-- Lua
+	"lua_ls",
+	-- Markdown linting
+	"rumdl",
+})
