@@ -26,7 +26,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		map("<leader>D", fzf.lsp_workspace_diagnostics, "Workspace diagnostics")
 		map("<leader>o", fzf.lsp_document_symbols, "Document symbols")
 		map("<leader>O", fzf.lsp_workspace_symbols, "Worksapce symbols")
-		map("<leader>rn", require("renamer").rename, "Rename all references")
+
+		vim.keymap.set("n", "<leader>rn", function()
+			return ":IncRename " .. vim.fn.expand("<cword>")
+		end, { desc = "LSP: Rename all refrences", buffer = event.buf, expr = true })
+
 		map("<leader>lf", vim.lsp.buf.format, "Format")
 		map("<leader>v", "<cmd>vsplit | lua vim.lsp.buf.definition()<cr>", "Goto Definition in Vertical Split")
 
