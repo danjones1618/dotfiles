@@ -16,7 +16,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			vim.diagnostic.jump({ count = 1, float = true })
 		end, "Go to next diagnostic item")
 		map("<leader>gs", vim.lsp.buf.signature_help, "Signature Documentation")
-		map("<leader>gd", fzf.lsp_declarations, "Goto Declaration")
+		map("<leader>gd", fzf.lsp_definitions, "Goto Definitions")
 		map("<leader>gr", fzf.lsp_references, "Goto refrences")
 		map("<leader>gf", fzf.lsp_finder, "All LSP locations combined view")
 		map("<leader>gi", fzf.lsp_implementations, "Goto implementions")
