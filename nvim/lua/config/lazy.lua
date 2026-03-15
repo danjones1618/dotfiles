@@ -24,8 +24,6 @@ vim.g.maplocalleader = "\\"
 -- Setup lazy.nvim
 require("lazy").setup({
 	spec = {
-		{ "nvim-treesitter/nvim-treesitter", lazy = false },
-		{ "nvim-treesitter/nvim-treesitter-context", lazy = false },
 		{ "tpope/vim-sensible" },
 		{ "tpope/vim-fugitive" },
 		{ "tpope/vim-commentary" },

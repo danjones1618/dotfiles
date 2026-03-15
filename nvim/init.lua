@@ -4,39 +4,6 @@ require("core.lsp")
 require("config.keymaps")
 require("config.autocmds")
 require("config.global_cmds")
-require("nvim-treesitter.configs").setup({
-	ensure_installed = {
-		"lua",
-		"python",
-		"rust",
-		"c",
-		"cpp",
-		"cmake",
-		"make",
-		"javascript",
-		"typescript",
-		"tsx",
-		"html",
-		"css",
-		"go",
-		"gotmpl",
-		"hcl",
-		"markdown",
-		"markdown_inline",
-		"nginx",
-		"typst",
-		"yang",
-		"xml",
-		"ssh_config",
-		"sql",
-		"toml",
-	},
-	highlight = {
-		enabled = true,
-		additional_vim_regex_highlighting = false,
-	},
-})
-require("treesitter-context").setup()
 require("fzf-lua").setup_fzfvim_cmds()
 require("nvim-rooter").setup({
 	rooter_patterns = { ".git", "=nvim" },
